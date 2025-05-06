@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling Example</title>
+</head>
+
+<body>
+
+    <div class="mouse" style="display: flex; flex-direction: row; justify-content: space-around;">
+        <div id="mouse-event1" style="width: 200px; height: 200px; background-color: aqua;">
+            <h4 style="text-decoration-color: aqua;">mouse left </h4>
+        </div>
+        <div id="mouse-event2" style="width: 200px; height: 200px; background-color: rgb(4, 255, 0);">
+            <h4 style="text-decoration-color: aqua;">mouse left </h4>
+        </div>
+        <div id="mouse-event3" style="width: 200px; height: 200px; background-color: rgb(54, 53, 125);">
+            <h4 style="text-decoration-color: aqua;">mouse left </h4>
+        </div>
+    </div>
+    <script>
+        const mouse = document.getElementById('mouse-event1');
+        function handleMouseEnter(event) {
+            if(event.type=="mouseenter"){
+            mouse.style.backgroundColor = 'red';
+            const h4 = mouse.querySelector('h4').innerHTML = 'mouse enter event';
+            }
+            else if(event.type=='mouseleave'){
+            mouse.style.backgroundColor = 'aqua';
+            const h4 = mouse.querySelector('h4').innerHTML = 'mouse leave event'
+            }
+
+        }
+      
+        mouse.addEventListener('mouseenter', handleMouseEnter);
+        mouse.addEventListener('mouseleave', handleMouseEnter);
+    </script>
+</body>
+
+</html>

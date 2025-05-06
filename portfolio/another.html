@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganesh - Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #56cced;
+            --secondary-color: #f0f8fa;
+        }
+        body {
+            background-color: var(--secondary-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .profile-image {
+            border: 4px solid var(--primary-color);
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .text-info {
+            color: var(--primary-color) !important;
+        }
+        .btn-info {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .table-info {
+            background-color: rgba(86, 204, 237, 0.1);
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(86, 204, 237, 0.1);
+            color: var(--primary-color);
+        }
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .social-btn:hover {
+            transform: scale(1.1);
+        }
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(86, 204, 237, 0.25);
+        }
+        @media (max-width: 768px) {
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-4">
+        <!-- Header Section -->
+        <header class="section text-center p-4 mb-4">
+            <img src="profile.jpg" alt="Ganesh" class="profile-image rounded-circle mb-3" loading="lazy">
+            <h1 class="fw-bold mb-2">Abcd</h1>
+            <p class="lead text-muted">Computer Science Student & Technology Enthusiast</p>
+        </header>
+
+        <!-- Contact Information -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Contact <span class="text-info">Information</span></h2>
+            <div class="d-flex justify-content-center gap-4 flex-wrap">
+                <p><i class="bi bi-envelope-fill me-2 text-info"></i>ganeshthotla594@gmail.com</p>
+                <p><i class="bi bi-phone-fill me-2 text-info"></i>9490155712</p>
+                <p><i class="bi bi-geo-alt-fill me-2 text-info"></i>Hyderabad, India</p>
+            </div>
+        </section>
+
+        <!-- Career Objective -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Career <span class="text-info">Objective</span></h2>
+            <p class="text-center mb-0">An enthusiastic developer, coding enthusiast, and problem solver dedicated to mastering technology. I thrive on exploring new tech horizons, consistently seeking opportunities to innovate, learn, and contribute meaningfully to the world of software development. Eager to collaborate with like-minded individuals and engage in projects that challenge and inspire.</p>
+        </section>
+
+        <!-- Academic Information -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Academic <span class="text-info">Information</span></h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-info">
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>B.Tech (Computer Science)</td>
+                            <td>KMIT</td>
+                            <td>Pursuing</td>
+                            <td>Current CGPA</td>
+                        </tr>
+                        <tr>
+                            <td>Intermediate</td>
+                            <td>Narayana College</td>
+                            <td>2021</td>
+                            <td>98.4%</td>
+                        </tr>
+                        <tr>
+                            <td>SSC</td>
+                            <td>Excellent Star High School</td>
+                            <td>2019</td>
+                            <td>10 CGPA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Technical <span class="text-info">Skills</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body text-center">
+                            <h3 class="card-title h5 mb-3">Programming Languages</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-code-square text-info me-2"></i>Java
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-code-square text-info me-2"></i>Python
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-code-square text-info me-2"></i>C++
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body text-center">
+                            <h3 class="card-title h5 mb-3">Web Technologies</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-globe text-info me-2"></i>MERN Stack
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-globe text-info me-2"></i>HTML/CSS
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-globe text-info me-2"></i>JavaScript
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body text-center">
+                            <h3 class="card-title h5 mb-3">Other Skills</h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-database text-info me-2"></i>Database Management
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-pc-display text-info me-2"></i>Operating Systems
+                                </li>
+                                <li class="list-group-item d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-robot text-info me-2"></i>Generative AI
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Projects -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Latest <span class="text-info">Projects</span></h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-info">Face Detection using Haarcascade</h4>
+                            <p>Implementation of facial detection system using OpenCV and Haarcascade classifiers.</p>
+                            <div class="badge bg-info text-dark">Computer Vision</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-info">Portfolio by React</h4>
+                            <p>Personal portfolio website developed using React.js and modern web technologies.</p>
+                            <div class="badge bg-info text-dark">Web Development</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h4 class="fw-bold text-info">Tic-Tac-Toe AI Game</h4>
+                            <p>Interactive game with AI opponent using minimax algorithm.</p>
+                            <div class="badge bg-info text-dark">Game Development</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">My <span class="text-info">Achievements</span></h2>
+            <div class="accordion" id="achievementsAccordion">
+                <div class="accordion-item border-info">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            <i class="bi bi-trophy-fill text-info me-2"></i>AI-based IT Training System Development
+                        </button>
+                    </h3>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#achievementsAccordion">
+                        <div class="accordion-body">
+                            Led the development of an innovative AI-powered training system that personalizes learning experiences for IT professionals. The system successfully improved learning outcomes by 40% through adaptive content delivery and real-time performance analysis.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-info">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            <i class="bi bi-award-fill text-info me-2"></i>LinkedIn Generative AI Certification
+                        </button>
+                    </h3>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#achievementsAccordion">
+                        <div class="accordion-body">
+                            Completed comprehensive certification in Generative AI, gaining expertise in current AI technologies and their practical applications in software development.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-info">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            <i class="bi bi-star-fill text-info me-2"></i>Academic Excellence
+                        </button>
+                    </h3>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#achievementsAccordion">
+                        <div class="accordion-body">
+                            Achieved 10 CGPA in SSC and 98.4% in Intermediate, demonstrating consistent academic performance and dedication to learning.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-info">
+                    <h3 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            <i class="bi bi-lightbulb-fill text-info me-2"></i>Technical Project Recognition
+                        </button>
+                    </h3>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#achievementsAccordion">
+                        <div class="accordion-body">
+                            Developed and successfully implemented face detection system using Haarcascade, receiving recognition for innovative approach and practical application.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Strengths -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">My <span class="text-info">Strengths</span></h2>
+            <div class="row row-cols-1 row-cols-md-2 g-3">
+                <div class="col">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="bi bi-puzzle-fill me-2"></i>Problem-Solving Aptitude</h5>
+                            <p class="card-text">Strong analytical skills with a systematic approach to solving complex technical challenges.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="bi bi-lightning-charge-fill me-2"></i>Quick Learning Ability</h5>
+                            <p class="card-text">Demonstrated capacity to rapidly acquire and apply new technical skills and knowledge.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="bi bi-people-fill me-2"></i>Team Collaboration</h5>
+                            <p class="card-text">Excellent communication and interpersonal skills, facilitating effective team coordination.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="bi bi-arrow-repeat me-2"></i>Technical Adaptability</h5>
+                            <p class="card-text">Ability to quickly adapt to new technologies and programming languages.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="bi bi-clock-fill me-2"></i>Time Management</h5>
+                            <p class="card-text">Efficient in handling multiple tasks and meeting deadlines while maintaining quality.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-info">
+                        <div class="card-body">
+                            <h5 class="card-title text-info"><i class="bi bi-search me-2"></i>Attention to Detail</h5>
+                            <p class="card-text">Meticulous approach to coding and documentation, ensuring high-quality deliverables.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Profile -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Personal <span class="text-info">Profile</span></h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="list-group">
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong><i class="bi bi-geo-alt-fill text-info me-2"></i>Current Location</strong>
+                            <span>Hyderabad</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong><i class="bi bi-calendar-date-fill text-info me-2"></i>Date of Birth</strong>
+                            <span>15-07-2004</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong><i class="bi bi-translate text-info me-2"></i>Languages Known</strong>
+                            <span>English, Telugu, Hindi</span>
+                        </div>
+                        <div class="list-group-item d-flex justify-content-between align-items-center">
+                            <strong><i class="bi bi-heart-fill text-info me-2"></i>Interests</strong>
+                            <span>AI Research, Web Development, Open Source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section class="section p-4">
+            <h2 class="text-center mb-4">Connect <span class="text-info">With Me</span></h2>
+            <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+                <a href="https://github.com/Ridhi153" class="social-btn btn btn-outline-dark rounded-circle" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ridhi-sriramula-6a1a57266/" class="social-btn btn btn-outline-primary rounded-circle" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://x.com/Ridhi1168072" class="social-btn btn btn-outline-dark rounded-circle" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-twitter-x"></i>
+                </a>
+                <a href="https://www.instagram.com/ridhi_sriramula/" class="social-btn btn btn-outline-danger rounded-circle" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="Sairidhi_Sriramula_Resume.pdf" class="btn btn-info text-white">
+                    <i class="bi bi-download me-2"></i>Download CV
+                </a>
+            </div>
+        </section>
+
+        <!-- Contact Us Form -->
+        <section class="section p-4 mt-4">
+            <h2 class="text-center mb-4">Get In <span class="text-info">Touch</span></h2>
+            <div class="contact-form">
+                <form id="contactForm" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                <label for="name"><i class="bi bi-person-fill text-info me-2"></i>Your Name</label>
+                                <div class="invalid-feedback">
+                                    Please provide your name.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                <label for="email"><i class="bi bi-envelope-fill text-info me-2"></i>Email Address</label>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="subject" placeholder="Enter subject" required>
+                                <label for="subject"><i class="bi bi-card-heading text-info me-2"></i>Subject</label>
+                                <div class="invalid-feedback">
+                                    Please provide a subject.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="message" placeholder="Enter your message" style="height: 150px" required></textarea>
+                                <label for="message"><i class="bi bi-chat-left-text-fill text-info me-2"></i>Your Message</label>
+                                <div class="invalid-feedback">
+                                    Please enter your message.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-info btn-lg text-white px-4">
+                                <i class="bi bi-send-fill me-2"></i>Send Message
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Form validation
+        (function() {
+            'use strict';
+            
+            // Fetch the form we want to apply custom Bootstrap validation styles to
+            const form = document.getElementById('contactForm');
+            
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                
+                form.classList.add('was-validated');
+            }, false);
+            
+            // Form submission handling (you would replace this with actual form submission code)
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to a server
+                // For demo purposes, we'll just show an alert
+                if (form.checkValidity()) {
+                    alert('Thank you for your message! I will get back to you soon.');
+                    form.reset();
+                    form.classList.remove('was-validated');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
